@@ -1,5 +1,5 @@
 {
-  "name": "nuxt_NoUI_netlify_functions",
+  "name": "nuxt_noui_netlify_functions",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -8,11 +8,15 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lint": "yarn lint:js"
+    "lint": "yarn lint:js",
+    "serve": "netlify-lambda serve functions/api",
+    "dev:all": "netlify-lambda serve functions/api & nuxt"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.2",
+    "@nuxtjs/proxy": "^2.0.1",
     "core-js": "^3.6.5",
+    "netlify-lambda": "^2.0.1",
     "nuxt": "^2.14.5"
   },
   "devDependencies": {
